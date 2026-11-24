@@ -285,30 +285,16 @@
   <section class="view" id="projects">
     <p class="tag">03 / resources</p>
     <h2>Labs SSO</h2>
-    <p class="sub">Des labs réalisés sur un annuaire fictif (gift.sa) synchronisé avec Entra ID, chacun documenté dans une fiche.</p>
+    <p class="sub">Lab réalisé pour une entreprise fictive (gift.sa) avec Entra ID, documenté dans une fiche.</p>
     <div class="grid">
       <article class="card proj reveal">
-        <div class="top"><span class="res">labs/saml-nextcloud</span><span class="lvl admin">admin</span></div>
-        <h3>SSO SAML : Entra ID ↔ Nextcloud</h3>
-        <p>Fédération SAML 2.0 entre Entra ID (IdP) et Nextcloud (SP) derrière un reverse proxy HTTPS. Analyse de l'assertion signée : Issuer, Audience, NameID, attributs et statements.</p>
-        <div class="tags"><span>SAML 2.0</span><span>Entra ID</span><span>Nextcloud</span><span>Docker</span></div>
-        <a class="more" href="https://github.com/TONPSEUDO/iam-lab-entra/blob/main/02-saml-nextcloud.md">Voir la fiche →</a>
+        <div class="top"><span class="res">labs/sso-saml-oidc</span><span class="lvl admin">admin</span></div>
+        <h3>SSO SAML &amp; OIDC : Entra ID ↔ BookStack &amp; Grafana</h3>
+        <p>Mise en place du SSO avec Entra ID : fédération SAML 2.0 pour BookStack (claims, configuration du .env, résolution de l'erreur AADSTS75011) et flux Authorization Code + PKCE pour Grafana (inscription de l'application, secret client, échanges /authorize et /token, consentement).</p>
+        <div class="tags"><span>SAML 2.0</span><span>OIDC</span><span>OAuth 2.0</span><span>PKCE</span><span>Entra ID</span><span>BookStack</span><span>Grafana</span></div>
+        <a class="more" href="https://github.com/YJEBARO/iam-lab-entra/blob/main/sso-saml-oidc.md">Voir la fiche →</a>
       </article>
-      <article class="card proj reveal">
-        <div class="top"><span class="res">labs/oidc-grafana</span><span class="lvl admin">admin</span></div>
-        <h3>SSO OIDC : Entra ID ↔ Grafana</h3>
-        <p>Flux Authorization Code + PKCE entre Entra ID et Grafana. Analyse des échanges /authorize et /token (front-channel et back-channel), consentement et diagnostic des erreurs AADSTS.</p>
-        <div class="tags"><span>OIDC</span><span>OAuth 2.0</span><span>PKCE</span><span>Entra ID</span></div>
-        <a class="more" href="https://github.com/TONPSEUDO/iam-lab-entra/blob/main/03-oidc-grafana.md">Voir la fiche →</a>
-      </article>
-      <article class="card proj reveal">
-        <div class="top"><span class="res">labs/hybrid-identity</span><span class="lvl write">write</span></div>
-        <h3>Identité hybride : AD → Entra ID</h3>
-        <p>Synchronisation d'un Active Directory on-premise vers Entra ID avec Entra Connect : filtrage par OU, alignement des UPN et identifiant EmployeeID. Socle des labs SSO.</p>
-        <div class="tags"><span>Active Directory</span><span>Entra Connect</span><span>PowerShell</span></div>
-        <a class="more" href="https://github.com/TONPSEUDO/iam-lab-entra/blob/main/01-hybrid-identity.md">Voir la fiche →</a>
-      </article>
-      </div>
+    </div>
   </section>
 
   <!-- CREDENTIALS -->
